@@ -30,9 +30,13 @@ function Landing() {
       <main>
         <Hero />
         <Philosophy />
+        <Journey />
+        <Criteria />
         <Features />
+        <FounderLetter />
         <Safety />
         <Testimonials />
+        <Faq />
         <FinalCta />
       </main>
       <Footer />
