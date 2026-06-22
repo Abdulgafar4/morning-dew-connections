@@ -346,9 +346,10 @@ function Safety() {
         <ul className="md:col-span-7 grid sm:grid-cols-2 gap-10">
           {points.map((p, i) => (
             <li key={p.title} className="border-t border-foreground/15 pt-6">
-              <span className="font-mono text-xs text-aqua-foreground text-foreground/40 mb-2 block">
+              <span className="font-mono text-xs text-foreground/40 mb-2 block">
                 / 0{i + 1}
               </span>
+
               <h3 className="font-display text-xl font-bold mb-3">{p.title}</h3>
               <p className="text-foreground/65 leading-relaxed">{p.body}</p>
             </li>
