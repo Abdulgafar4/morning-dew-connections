@@ -52,11 +52,12 @@ function Nav() {
         <a href="#top" className="font-display font-extrabold text-xl tracking-tight">
           BOND
         </a>
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/70">
+        <div className="hidden md:flex items-center gap-7 text-sm font-medium text-foreground/70">
           <a href="#philosophy" className="hover:text-foreground transition-colors">Philosophy</a>
+          <a href="#journey" className="hover:text-foreground transition-colors">Journey</a>
           <a href="#features" className="hover:text-foreground transition-colors">Features</a>
           <a href="#safety" className="hover:text-foreground transition-colors">Safety</a>
-          <a href="#voices" className="hover:text-foreground transition-colors">Voices</a>
+          <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
         </div>
         <a
           href="#waitlist"
