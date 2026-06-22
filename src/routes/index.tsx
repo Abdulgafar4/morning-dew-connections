@@ -456,3 +456,242 @@ function Footer() {
     </footer>
   );
 }
+
+/* ---------- Journey / How Bond works ---------- */
+function Journey() {
+  const steps = [
+    {
+      step: "Apply",
+      title: "A thoughtful application.",
+      body: "Tell us who you are, what you're looking for, and how you'd like to be met. Most applications take fifteen minutes — we read every one.",
+      meta: "Mon–Thu · ~15 min",
+    },
+    {
+      step: "Verify",
+      title: "A brief human conversation.",
+      body: "Once accepted, you'll verify your identity and meet a member of our team over a short video call. No bots, no scripts — a real welcome.",
+      meta: "Within 7 days",
+    },
+    {
+      step: "Meet",
+      title: "Sunday morning matches.",
+      body: "Each Sunday at 9am, three curated introductions arrive. You read, you reflect, you choose. When the match is mutual, we help you make a plan.",
+      meta: "Weekly · Every Sunday",
+    },
+  ];
+
+  return (
+    <section id="journey" className="py-32 md:py-40 px-6 bg-aqua/15 border-y border-foreground/5">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-20 md:mb-28 max-w-2xl">
+          <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-foreground/50 mb-6 block font-medium">
+            02 — The journey
+          </span>
+          <h2 className="font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[0.95]">
+            A weekly ritual, <br />
+            <span className="italic font-medium">not an endless scroll.</span>
+          </h2>
+        </div>
+
+        <ol className="grid md:grid-cols-3 gap-px bg-foreground/10 rounded-3xl overflow-hidden border border-foreground/10">
+          {steps.map((s, i) => (
+            <li key={s.step} className="bg-background p-10 lg:p-12 relative">
+              <div className="flex items-baseline justify-between mb-10">
+                <span className="font-display text-7xl font-extrabold text-foreground/15 leading-none">
+                  0{i + 1}
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-foreground/40">
+                  {s.meta}
+                </span>
+              </div>
+              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-foreground/40 mb-3 block">
+                {s.step}
+              </span>
+              <h3 className="font-display text-2xl lg:text-3xl font-bold mb-4 tracking-tight leading-tight">
+                {s.title}
+              </h3>
+              <p className="text-foreground/65 leading-relaxed">{s.body}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Criteria / Who Bond is for ---------- */
+function Criteria() {
+  const forYou = [
+    "You're 26–45, living or working in New York City.",
+    "You've outgrown the swipe and want introductions with intention.",
+    "You value depth, taste, and discretion over volume and metrics.",
+    "You're ready for a relationship — not auditioning for one.",
+  ];
+  const notYet = [
+    "You're casually browsing and not looking for anything serious.",
+    "You'd rather optimize for likes than be known.",
+    "You'd prefer a public-facing profile and unlimited matches.",
+  ];
+
+  return (
+    <section className="py-32 md:py-40 px-6 max-w-7xl mx-auto">
+      <div className="grid md:grid-cols-12 gap-12 lg:gap-20 items-start">
+        <div className="md:col-span-4">
+          <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-foreground/50 mb-6 block font-medium">
+            03 — Who Bond is for
+          </span>
+          <h2 className="font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[0.95] mb-8">
+            A small <br />
+            <span className="italic font-medium">community.</span>
+          </h2>
+          <p className="text-foreground/65 leading-relaxed max-w-sm">
+            Bond is intentionally limited. We accept fewer than 1 in 12 applications — not to be exclusive, but to keep the community aligned.
+          </p>
+        </div>
+
+        <div className="md:col-span-8 grid sm:grid-cols-2 gap-px bg-foreground/10 rounded-3xl overflow-hidden border border-foreground/10">
+          <div className="bg-background p-10 lg:p-12">
+            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-foreground/40 mb-6 block">
+              Bond is for you if
+            </span>
+            <ul className="space-y-5">
+              {forYou.map((line) => (
+                <li key={line} className="flex gap-4 text-foreground/80 leading-relaxed">
+                  <span className="mt-2 size-1.5 rounded-full bg-mint shrink-0" />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-background/60 p-10 lg:p-12">
+            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-foreground/40 mb-6 block">
+              Maybe not yet if
+            </span>
+            <ul className="space-y-5">
+              {notYet.map((line) => (
+                <li key={line} className="flex gap-4 text-foreground/55 leading-relaxed">
+                  <span className="mt-2 h-px w-4 bg-foreground/30 shrink-0 translate-y-2" />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Founder Letter ---------- */
+function FounderLetter() {
+  return (
+    <section className="py-32 md:py-40 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden>
+        <div className="absolute top-10 right-[10%] size-80 orb-refraction rounded-full blur-3xl opacity-40 animate-float-orb" />
+      </div>
+      <div className="relative max-w-3xl mx-auto">
+        <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-foreground/50 mb-8 block font-medium">
+          05 — A letter from our founder
+        </span>
+        <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight leading-[1] mb-12">
+          <span className="italic font-medium">"We built Bond</span> because we missed
+          the feeling of meeting someone who actually saw us."
+        </h2>
+        <div className="space-y-6 text-foreground/70 text-lg leading-relaxed">
+          <p>
+            I spent four years in the apps. I had thousands of matches, dozens of dates, and almost no conversations that mattered. The product was working perfectly — it just wasn't working for me.
+          </p>
+          <p>
+            Dating in New York has become a performance. We curate ourselves into thumbnails, optimize our prompts, and swipe until our thumbs ache. Somewhere between the algorithm and the inbox, the person disappears.
+          </p>
+          <p>
+            Bond is our quiet rebellion. Three matches a week. Real verification. No public profiles. A team that treats every introduction like it might be the last first date — because for someone, it will be.
+          </p>
+          <p>
+            If that sounds like the kind of room you've been looking for, we'd love to meet you.
+          </p>
+        </div>
+        <div className="mt-12 flex items-center gap-4">
+          <div className="size-12 rounded-full bg-gradient-to-br from-aqua to-mint" aria-hidden />
+          <div>
+            <p className="font-display font-bold text-lg leading-tight">Eleanor Hayes</p>
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-foreground/50 mt-1">
+              Founder & CEO · Brooklyn
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- FAQ ---------- */
+function Faq() {
+  const items = [
+    {
+      q: "How do I get an invite?",
+      a: "Join the waitlist and complete a short application. We review applications weekly and accept members based on alignment with the community — not income, photos, or follower counts.",
+    },
+    {
+      q: "Is Bond really invite-only?",
+      a: "Yes. We're currently in NYC-only beta, accepting fewer than 1 in 12 applicants. Existing members can refer one person per quarter, and the rest is curated by our team.",
+    },
+    {
+      q: "How is my privacy protected?",
+      a: "Profiles are never public and cannot be searched or screenshotted. All messages, photos, and audio are end-to-end encrypted. We collect the minimum data needed to make great introductions — and nothing else.",
+    },
+    {
+      q: "How does verification work?",
+      a: "Every member completes ID verification, a selfie match, and a brief video conversation with our trust team. The person you meet is exactly who they say they are.",
+    },
+    {
+      q: "What does Bond cost?",
+      a: "Membership is $39/month during NYC beta. There are no boosts, no super-likes, no paywalls inside the product. One price, fully unlocked.",
+    },
+    {
+      q: "When will Bond expand beyond New York?",
+      a: "London opens in late 2026, Paris in 2027. Join the waitlist with your city and we'll reach out when we're nearby.",
+    },
+  ];
+
+  return (
+    <section id="faq" className="py-32 md:py-40 px-6 bg-stone/40 border-y border-foreground/5">
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-16 md:mb-20 max-w-2xl">
+          <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-foreground/50 mb-6 block font-medium">
+            08 — Questions, answered
+          </span>
+          <h2 className="font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[0.95]">
+            The fine <br />
+            <span className="italic font-medium">print.</span>
+          </h2>
+        </div>
+
+        <dl className="border-t border-foreground/15">
+          {items.map((item, i) => (
+            <details
+              key={item.q}
+              className="group border-b border-foreground/15 py-7"
+              {...(i === 0 ? { open: true } : {})}
+            >
+              <summary className="flex items-start justify-between gap-8 cursor-pointer list-none">
+                <span className="font-display text-xl md:text-2xl font-bold tracking-tight pr-4 leading-snug">
+                  {item.q}
+                </span>
+                <span
+                  aria-hidden
+                  className="mt-2 size-6 rounded-full border border-foreground/20 flex items-center justify-center text-foreground/60 group-open:rotate-45 group-open:bg-foreground group-open:text-background transition-all duration-300 shrink-0"
+                >
+                  +
+                </span>
+              </summary>
+              <dd className="mt-5 text-foreground/65 leading-relaxed text-lg max-w-3xl">
+                {item.a}
+              </dd>
+            </details>
+          ))}
+        </dl>
+      </div>
+    </section>
+  );
+}
