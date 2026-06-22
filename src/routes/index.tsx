@@ -275,7 +275,7 @@ function Features() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16 md:mb-24">
           <div>
             <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-foreground/50 mb-6 block font-medium">
-              02 — Features
+              04 — Features
             </span>
             <h2 className="font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[0.95] max-w-2xl">
               Built like a place, <br />
@@ -337,7 +337,7 @@ function Safety() {
       <div className="grid md:grid-cols-12 gap-16">
         <div className="md:col-span-5">
           <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-foreground/50 mb-6 block font-medium">
-            03 — Safety
+            06 — Safety
           </span>
           <h2 className="font-display text-5xl lg:text-6xl font-bold tracking-tight leading-[0.95] mb-8">
             Trust, by <br />
@@ -378,7 +378,7 @@ function Testimonials() {
     <section id="voices" className="py-24 md:py-32 border-y border-foreground/5 bg-mint/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-16">
         <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-foreground/50 mb-6 block font-medium">
-          04 — Voices from the beta
+          07 — Voices from the beta
         </span>
       </div>
       <div className="overflow-hidden">
